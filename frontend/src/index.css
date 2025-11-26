@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global app styles */
+body {
+  @apply bg-gray-100 text-gray-900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Reusable Form Input */
+.input {
+  @apply border border-gray-300 p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-gray-600;
+}
+
+/* Primary Button */
+.btn {
+  @apply bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition;
+}
+
+/* Danger / Delete Button */
+.btn-danger {
+  @apply bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition;
+}
+
+/* App container */
+.app-container {
+  @apply max-w-4xl mx-auto mt-8 p-6;
+}
+
+/* Card */
+.card {
+  @apply bg-white border border-gray-200 rounded-lg shadow-sm p-6;
+}
+
+/* Navbar */
+.navbar {
+  @apply bg-white border-b border-gray-200;
+}
+
+.navbar-inner {
+  @apply max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-4;
+}
+
+.logo {
+  @apply text-xl font-bold text-gray-800;
+}
+
+.nav-links {
+  @apply flex items-center gap-3;
+}
+
+.nav-link {
+  @apply text-gray-700 px-3 py-1 rounded hover:bg-gray-100 transition;
+}
+
+.avatar {
+  @apply w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-sm font-semibold text-gray-700;
+}
+
+/* Form card (for login/signup) */
+.form-card {
+  @apply max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow;
+}
+
+/* Small helpers */
+.muted { @apply text-gray-500; }
+.muted-sm { @apply text-sm text-gray-500; }
+
+@media (max-width: 640px) {
+  .navbar-inner { @apply px-3; }
+  .app-container { @apply px-4; }
+}
